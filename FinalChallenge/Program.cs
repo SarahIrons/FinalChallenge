@@ -11,13 +11,16 @@ namespace FinalChallenge
         static void Main(string[] args)
         {
 
-            var context = new SchoolContext();
+            using (var context = new SchoolContext())
             {
 
                 var student = new Student() { StudentName = "Sam Jones" };
 
                 context.Students.Add(student);
                 context.SaveChanges();
+                
+                Console.Write("Student saved successfully!");
+               
             }
         }
     }

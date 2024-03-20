@@ -19,5 +19,5 @@ namespace FinalChallenge
             public Grade Grade { get; set; }
 
     }
-    }
+    
 }
